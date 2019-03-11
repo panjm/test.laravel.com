@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::group(['namespace'=>'Admin'],function (){
     Route::get('admin/index',"IndexController@index");
 });
+
+Route::group(['namespace'=>'Demo','prefix'=>'test'],function (){
+    Route::any('/storage','MiaoshaController@storage');
+});
